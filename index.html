@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+    <canvas id="canvas" style="display:block;margin:50px auto;">
+        当前浏览器不支持Canvas，请更换浏览器后再试
+    </canvas>
+    <div class="settime">
+        <input type="text" class="time">
+        <br/>
+        <button class="set">设置时间</button>
+    </div>
+    <script src="digit.js"></script>
+    <script src="countdown.js"></script>
+    <script>
+        let setbutton = document.getElementsByClassName('set')[0]
+        let time = document.getElementsByClassName('time')[0]
+        setbutton.addEventListener('click',() => {
+            arr = time.value.split(':')
+            settime = arr.map(item => {
+               return parseInt(item)
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.settime {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+.settime input {
+    margin-bottom: 10px;
+}
